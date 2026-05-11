@@ -1,0 +1,26 @@
+[
+  {
+    "id": "45da61f2-4c9e-4a1d-9325-eb1fd6de3614",
+    "title": "sports day on 7 may 2026",
+    "category": "event",
+    "createdAt": "2026-05-11T12:32:18.897Z"
+  },
+  {
+    "id": "notice-1",
+    "title": "Admissions Open For Session 2026-27",
+    "category": "Admission",
+    "createdAt": "2026-05-11T12:20:39.678Z"
+  },
+  {
+    "id": "notice-2",
+    "title": "Playway To Xth Class Registrations Started",
+    "category": "Registration",
+    "createdAt": "2026-05-11T12:20:39.678Z"
+  },
+  {
+    "id": "notice-3",
+    "title": "Annual Function Celebration This Month",
+    "category": "Event",
+    "createdAt": "2026-05-11T12:20:39.678Z"
+  }
+]

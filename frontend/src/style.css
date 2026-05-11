@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap");
+
+:root {
+  --pps-ink: #142033;
+  --pps-muted: #637187;
+  --pps-blue: #071a38;
+  --pps-gold: #dca72c;
+  --pps-soft: #fbf8ef;
+  --pps-line: #e8e0d1;
+  --pps-white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; background: var(--pps-soft); color: var(--pps-ink); font-family: "Inter", sans-serif; }
+.pps a, .adminPage a { color: inherit; text-decoration: none; }
+.pps img { display: block; max-width: 100%; }
+button { font: inherit; }
+
+.ppsTop { position: fixed; top: 0; left: 0; z-index: 1000; width: 100%; display: flex; justify-content: center; gap: 28px; padding: 10px 6%; background: var(--pps-gold); color: #111827; font-size: 14px; font-weight: 900; }
+.ppsNav { position: fixed; top: 48px; left: 50%; z-index: 999; width: min(1180px, 92%); transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 12px 16px; border: 1px solid rgba(255,255,255,.14); border-radius: 14px; background: rgba(7,26,56,.94); box-shadow: 0 16px 45px rgba(0,0,0,.22); backdrop-filter: blur(16px); }
+.ppsBrand { display: flex; align-items: center; gap: 12px; color: white; }
+.ppsBrand img { width: 50px; height: 50px; padding: 5px; border-radius: 10px; background: white; object-fit: contain; }
+.ppsBrand strong { display: block; font-size: 18px; font-weight: 900; }
+.ppsBrand small { display: block; margin-top: 2px; color: #cbd5e1; font-size: 12px; font-weight: 700; }
+.ppsLinks { display: flex; gap: 18px; color: #edf2f7; font-size: 14px; font-weight: 800; }
+.ppsLinks a:hover { color: var(--pps-gold); }
+.ppsNavCta, .ppsActions a, .ppsActions button, .ppsEnquiryCard button, .ppsContact button, .adminLogin button, .noticeForm button { border: 0; border-radius: 10px; font-weight: 900; cursor: pointer; }
+.ppsNavCta { padding: 13px 18px; background: var(--pps-gold); color: #111827; }
+
+.ppsHero { position: relative; min-height: 100vh; padding: 178px 8% 92px; background: url("/school/hero.jpg") center / cover no-repeat; }
+.ppsHeroShade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,26,56,.96) 0%, rgba(7,26,56,.78) 50%, rgba(7,26,56,.22) 100%), linear-gradient(0deg, rgba(7,26,56,.45), rgba(7,26,56,.08)); }
+.ppsHeroInner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 360px; gap: 50px; align-items: end; min-height: calc(100vh - 270px); color: white; }
+.ppsHeroText { max-width: 790px; }
+.ppsLabel { display: inline-block; color: var(--pps-gold); font-size: 13px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+.ppsHero .ppsLabel { margin-bottom: 18px; padding: 10px 14px; border: 1px solid rgba(220,167,44,.45); border-radius: 999px; background: rgba(220,167,44,.14); }
+.pps h1, .pps h2, .adminPage h1 { font-family: "Playfair Display", serif; letter-spacing: 0; }
+.ppsHero h1 { max-width: 760px; margin-bottom: 22px; font-size: clamp(46px, 7vw, 84px); line-height: .98; }
+.ppsHeroText p { max-width: 680px; color: #e7edf7; font-size: 19px; line-height: 1.75; }
+.ppsActions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.ppsActions a, .ppsActions button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 15px 22px; }
+.ppsActions a { background: var(--pps-gold); color: #111827; box-shadow: 0 16px 32px rgba(220,167,44,.28); }
+.ppsActions button { border: 1px solid rgba(255,255,255,.3); color: white; background: rgba(255,255,255,.1); }
+.ppsEnquiryCard { padding: 28px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: rgba(255,255,255,.12); color: white; backdrop-filter: blur(16px); }
+.ppsEnquiryCard span { color: var(--pps-gold); font-size: 12px; font-weight: 900; text-transform: uppercase; }
+.ppsEnquiryCard h2 { margin-top: 8px; font-size: 30px; }
+.ppsEnquiryCard p { margin: 12px 0 20px; color: #dbe5f3; line-height: 1.7; }
+.ppsEnquiryCard button { display: inline-flex; padding: 13px 18px; background: white; color: var(--pps-blue); }
+
+.ppsStats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--pps-blue); color: white; }
+.ppsStats article { padding: 34px 8%; border-right: 1px solid rgba(255,255,255,.1); }
+.ppsStats strong { display: block; color: var(--pps-gold); font-size: 34px; font-weight: 900; line-height: 1; }
+.ppsStats span { display: block; margin-top: 8px; color: #dbe5f3; font-weight: 800; }
+.ppsSection, .ppsCampus, .ppsAdmission, .ppsContact { padding: 96px 8%; }
+.ppsSectionHead { max-width: 760px; margin-bottom: 34px; }
+.ppsSection h2, .ppsSectionHead h2, .ppsCampus h2, .ppsAdmission h2, .ppsContact h2 { margin-top: 12px; font-size: clamp(36px, 4vw, 56px); line-height: 1.08; }
+.ppsAbout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 52px; align-items: start; background: white; }
+.ppsAbout > p, .ppsCampus p, .ppsContact p, .ppsFacilityGrid p, .ppsSteps p { color: var(--pps-muted); font-size: 18px; line-height: 1.8; }
+.ppsFacilities, .ppsAdmission { background: var(--pps-soft); }
+.ppsFacilityGrid, .ppsNoticeGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ppsFacilityGrid article, .ppsSteps article, .ppsNoticeGrid article { padding: 26px; border: 1px solid var(--pps-line); border-radius: 14px; background: white; box-shadow: 0 10px 26px rgba(18,32,51,.07); }
+.ppsFacilityGrid span { display: grid; width: 34px; height: 34px; margin-bottom: 18px; place-items: center; border-radius: 50%; background: var(--pps-blue); color: var(--pps-gold); font-weight: 900; }
+.ppsFacilityGrid h3, .ppsSteps h3 { margin-bottom: 10px; font-size: 22px; }
+.ppsNoticeSection, .ppsGallery { background: white; }
+.ppsNoticeGrid span { color: #8d650d; font-size: 12px; font-weight: 900; text-transform: uppercase; }
+.ppsNoticeGrid h3 { margin-top: 10px; font-size: 22px; }
+.ppsCampus { display: grid; grid-template-columns: .85fr 1.15fr; gap: 52px; align-items: center; background: var(--pps-blue); color: white; }
+.ppsCampus p { color: #d5dfec; }
+.ppsCampus img { width: 100%; height: 440px; border-radius: 14px; object-fit: cover; box-shadow: 0 24px 60px rgba(0,0,0,.24); }
+.ppsGalleryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ppsGalleryButton { position: relative; min-height: 310px; overflow: hidden; border: 0; border-radius: 14px; background: #d8dee8; cursor: zoom-in; text-align: left; }
+.ppsGalleryButton img { width: 100%; height: 100%; min-height: 310px; object-fit: cover; transition: transform .45s ease; }
+.ppsGalleryButton:hover img { transform: scale(1.04); }
+.ppsGalleryButton h3 { position: absolute; inset: auto 0 0 0; padding: 48px 22px 22px; background: linear-gradient(transparent, rgba(3,10,23,.9)); color: white; font-size: 20px; }
+.ppsAdmission { display: grid; grid-template-columns: .75fr 1.25fr; gap: 42px; }
+.ppsSteps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.ppsSteps b { display: block; margin-bottom: 14px; color: var(--pps-gold); font-size: 30px; }
+.ppsContact { display: grid; grid-template-columns: .9fr 1.1fr; gap: 52px; align-items: center; background: linear-gradient(90deg, rgba(7,26,56,.96), rgba(7,26,56,.76)), url("/school/gallery2.jpg") center / cover no-repeat; color: white; }
+.ppsContact p { margin-top: 12px; color: #e0e8f3; }
+.ppsContact form { display: grid; gap: 14px; padding: 28px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: rgba(255,255,255,.1); backdrop-filter: blur(18px); }
+.ppsContact input, .ppsContact textarea, .popupForm input, .popupForm textarea { width: 100%; border: 1px solid transparent; border-radius: 10px; padding: 16px; color: var(--pps-ink); font: inherit; outline: none; }
+.ppsContact textarea, .popupForm textarea { min-height: 120px; resize: vertical; }
+.ppsContact button { min-height: 54px; background: var(--pps-gold); color: #111827; }
+.ppsFormStatus { font-weight: 800; }
+.ppsFooter { padding: 44px 8%; background: #041025; color: white; text-align: center; }
+.ppsFooter h2 { font-size: 30px; }
+.ppsFooter p { margin-top: 8px; color: #cbd5e1; }
+
+.ppsFloatingTools { position: fixed; right: 18px; bottom: 18px; z-index: 900; display: flex; gap: 10px; align-items: center; }
+.ppsFloatingTools button, .ppsFloatingTools a { border: 0; border-radius: 999px; padding: 13px 16px; background: #16a34a; color: white; font-weight: 900; box-shadow: 0 16px 34px rgba(22,163,74,.28); cursor: pointer; }
+.ppsFloatingTools button:nth-child(1) { background: var(--pps-gold); color: #111827; }
+.ppsFloatingTools button:nth-child(2) { background: white; color: var(--pps-blue); }
+
+.popupOverlay { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; padding: 20px; background: rgba(2, 8, 23, .72); backdrop-filter: blur(10px); }
+.popupCard { position: relative; width: min(560px, 100%); padding: 34px; border: 1px solid rgba(255,255,255,.16); border-radius: 18px; background: white; color: var(--pps-ink); box-shadow: 0 30px 90px rgba(0,0,0,.28); }
+.popupClose { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #f1f5f9; color: #0f172a; font-size: 26px; cursor: pointer; }
+.popupTag { color: var(--pps-gold); font-size: 13px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+.popupCard h2 { margin: 12px 34px 12px 0; font-family: "Playfair Display", serif; font-size: 38px; line-height: 1.05; }
+.popupCard p { color: var(--pps-muted); font-size: 17px; line-height: 1.75; }
+.popupActions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.popupActions a, .popupActions button, .popupForm button { border: 0; border-radius: 10px; padding: 14px 18px; background: var(--pps-gold); color: #111827; font-weight: 900; cursor: pointer; }
+.popupActions button { background: var(--pps-blue); color: white; }
+.popupForm { display: grid; gap: 12px; margin-top: 22px; }
+.popupForm button { min-height: 52px; }
+
+.lightbox { position: fixed; inset: 0; z-index: 2100; display: grid; place-items: center; padding: 58px 78px; background: rgba(2, 8, 23, .9); }
+.lightbox img { max-width: min(1100px, 100%); max-height: 78vh; border-radius: 14px; object-fit: contain; box-shadow: 0 30px 90px rgba(0,0,0,.42); }
+.lightboxClose, .lightboxArrow { position: fixed; border: 0; color: white; background: rgba(255,255,255,.12); cursor: pointer; }
+.lightboxClose { top: 22px; right: 24px; width: 46px; height: 46px; border-radius: 50%; font-size: 34px; }
+.lightboxArrow { top: 50%; transform: translateY(-50%); width: 48px; height: 68px; border-radius: 12px; font-size: 48px; line-height: 1; }
+.lightboxPrev { left: 22px; }
+.lightboxNext { right: 22px; }
+.lightboxCaption { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); padding: 12px 18px; border-radius: 999px; background: rgba(255,255,255,.12); color: white; font-weight: 900; }
+
+.adminPage { min-height: 100vh; background: #fbf8ef; color: #142033; }
+.adminHero { padding: 78px 8% 60px; background: linear-gradient(90deg, rgba(7,26,56,.96), rgba(7,26,56,.7)), url("/school/hero.jpg") center / cover no-repeat; color: white; }
+.adminBack { display: inline-block; margin-bottom: 28px; color: #dca72c; font-weight: 900; }
+.adminHero span { color: #dca72c; font-size: 13px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+.adminHero h1 { margin-top: 12px; font-size: clamp(42px, 7vw, 72px); line-height: 1; }
+.adminHero p { max-width: 760px; margin-top: 18px; color: #dbe5f3; font-size: 18px; line-height: 1.7; }
+.adminPanel { padding: 42px 8% 80px; }
+.adminLogin, .noticeForm { display: flex; gap: 12px; max-width: 760px; }
+.adminLogin input, .adminLogin button, .noticeForm input, .noticeForm button, .adminCard select { border: 1px solid #e8e0d1; border-radius: 10px; padding: 14px 16px; font: inherit; }
+.adminLogin input, .noticeForm input { flex: 1; }
+.adminLogin button, .noticeForm button { border: 0; background: #dca72c; color: #111827; cursor: pointer; }
+.adminMessage { margin-top: 18px; color: #637187; font-weight: 800; }
+.adminStats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 28px; }
+.adminStats article, .adminCard, .noticeList article { padding: 24px; border: 1px solid #e8e0d1; border-radius: 14px; background: white; box-shadow: 0 10px 26px rgba(18,32,51,.07); }
+.adminStats strong { display: block; color: #dca72c; font-size: 34px; }
+.adminStats span { color: #637187; font-weight: 800; }
+.adminSplit { display: grid; grid-template-columns: .75fr 1.25fr; gap: 28px; margin-top: 34px; align-items: start; }
+.adminSplit h2 { margin-bottom: 16px; font-size: 28px; }
+.noticeList { display: grid; gap: 14px; margin-top: 18px; }
+.noticeList span, .adminCard span { display: inline-block; border-radius: 999px; padding: 6px 10px; background: #fff3c4; color: #8d650d; font-size: 12px; font-weight: 900; text-transform: uppercase; }
+.noticeList h3 { margin: 10px 0 14px; font-size: 18px; }
+.noticeList button { border: 0; background: #fee2e2; color: #991b1b; border-radius: 8px; padding: 9px 12px; font-weight: 900; cursor: pointer; }
+.adminGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.adminCard div { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.adminCard small, .adminCard p { color: #637187; }
+.adminCard h3 { margin-bottom: 12px; font-size: 24px; }
+.adminCard p { margin-top: 8px; line-height: 1.6; }
+.adminCard select { width: 100%; margin-top: 18px; background: #fbf8ef; }
+
+@media (max-width: 1050px) {
+  .ppsLinks { display: none; }
+  .ppsHeroInner, .ppsAbout, .ppsCampus, .ppsAdmission, .ppsContact, .adminSplit { grid-template-columns: 1fr; }
+  .ppsFacilityGrid, .ppsGalleryGrid, .ppsStats, .ppsNoticeGrid, .adminStats, .adminGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .ppsTop { justify-content: flex-start; gap: 18px; overflow-x: auto; font-size: 12px; }
+  .ppsNav { top: 42px; width: 94%; padding: 10px; }
+  .ppsBrand img { width: 42px; height: 42px; }
+  .ppsBrand strong { font-size: 15px; }
+  .ppsBrand small, .ppsNavCta { display: none; }
+  .ppsHero { padding: 150px 6% 56px; background-position: 58% center; }
+  .ppsHeroInner { min-height: auto; grid-template-columns: 1fr; }
+  .ppsHeroText p { font-size: 16px; }
+  .ppsSection, .ppsCampus, .ppsAdmission, .ppsContact, .adminPanel { padding: 72px 6%; }
+  .adminHero { padding-left: 6%; padding-right: 6%; }
+  .ppsFacilityGrid, .ppsGalleryGrid, .ppsStats, .ppsSteps, .ppsNoticeGrid, .adminStats, .adminGrid, .adminLogin, .noticeForm { grid-template-columns: 1fr; display: grid; }
+  .ppsCampus img, .ppsGalleryButton, .ppsGalleryButton img { height: auto; min-height: 260px; }
+  .ppsFloatingTools { left: 10px; right: 10px; bottom: 10px; justify-content: center; }
+  .ppsFloatingTools button, .ppsFloatingTools a { flex: 1; padding: 12px 10px; text-align: center; font-size: 13px; }
+  .popupCard { padding: 28px 20px; }
+  .popupCard h2 { font-size: 32px; }
+  .lightbox { padding: 62px 16px; }
+  .lightboxArrow { width: 42px; height: 56px; font-size: 38px; }
+}
