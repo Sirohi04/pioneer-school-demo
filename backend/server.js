@@ -47,9 +47,12 @@ app.use(morgan("dev"));
 app.use(express.json({ limit: "80kb" }));
 app.use(
   cors({
-    origin: [FRONTEND_URL, "http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: "*",
+    methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "x-admin-key"],
   })
 );
+
 
 async function ensureFile(file, fallback) {
   await mkdir(DATA_DIR, { recursive: true });
